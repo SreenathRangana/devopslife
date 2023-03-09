@@ -1,0 +1,1468 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Sreenath-AWS & DevOps">
+      
+      
+        <meta name="author" content="SREENATH RANGANA">
+      
+      
+      <link rel="icon" href="../../sr-logo.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.7">
+    
+    
+      
+        <title>Ansible - SREENATH RANGANA</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4a0965b7.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="light-green" data-md-color-accent="yellow">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ansible" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="SREENATH RANGANA" class="md-header__button md-logo" aria-label="SREENATH RANGANA" data-md-component="logo">
+      
+  <img src="../../sr-logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SREENATH RANGANA
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Ansible
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="light-green" data-md-color-accent="yellow"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_3" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="yellow"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_3">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9h-1.9M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69m-9.15 3.96h2.3L12 9l-1.15 3.65Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/SreenathRangana?tab=repositories" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    My-GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../home-page/" class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../about/" class="md-tabs__link">
+      About
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../skills/" class="md-tabs__link">
+        Profile
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../devopsintro/" class="md-tabs__link md-tabs__link--active">
+        DevOps
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../medium-articles/" class="md-tabs__link">
+        Medium Blogs
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="SREENATH RANGANA" class="md-nav__button md-logo" aria-label="SREENATH RANGANA" data-md-component="logo">
+      
+  <img src="../../sr-logo.png" alt="logo">
+
+    </a>
+    SREENATH RANGANA
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/SreenathRangana?tab=repositories" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    My-GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../home-page/" class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        About
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Profile
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Profile" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Profile
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../skills/" class="md-nav__link">
+        Skills
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jobroles/" class="md-nav__link">
+        Job Roles
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/" class="md-nav__link">
+        Projects
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cert/" class="md-nav__link">
+        Certifications
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          DevOps
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="DevOps" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          DevOps
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../devopsintro/" class="md-nav__link">
+        DevOps
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shellscript/" class="md-nav__link">
+        Shell Scripting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jenkins/" class="md-nav__link">
+        Jenkins
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Ansible
+      </a>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker/" class="md-nav__link">
+        Docker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_6" type="checkbox" id="__nav_4_6" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_6">
+          Kuberbenetes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Kuberbenetes" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_6">
+          <span class="md-nav__icon md-icon"></span>
+          Kuberbenetes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kubernetes/introduction/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kubernetes/kops/" class="md-nav__link">
+        KOPS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kubernetes/k3s/" class="md-nav__link">
+        K3S
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Medium Blogs
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Medium Blogs" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Medium Blogs
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../medium-articles/" class="md-nav__link">
+        StyraDAS
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="ansible">Ansible<a class="headerlink" href="#ansible" title="Permanent link">&para;</a></h1>
+<p>Ansible is an open source IT Configuration Management, Deployment &amp; Orchestration tool. It aims to provide large productivity gains to a wide variety of automation challenges. This tool is very simple to use yet powerful enough to automate complex multi-tier IT application environments.</p>
+<h1 id="installing-ansible">Installing Ansible<a class="headerlink" href="#installing-ansible" title="Permanent link">&para;</a></h1>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Ubuntu</label><label for="__tabbed_1_2">CentOS</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block"></div>
+</div>
+</div>
+<h1 id="sample-inventory-file">Sample Inventory file<a class="headerlink" href="#sample-inventory-file" title="Permanent link">&para;</a></h1>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Inventory</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>##Host Level
+
+webserver01    ansible_host=&lt;Private IP&gt;
+webserver02    ansible_host=&lt;Private IP&gt;
+webserver03    ansible_host=&lt;Private IP&gt;      
+dbserver01     ansible_host=&lt;Private IP&gt;
+dbserver02     ansible_host=&lt;Private IP&gt;      ansible_user=ubuntu
+
+##Group Level
+
+[Group1]
+webserverserver01
+webserverserver02
+webserverserver03
+
+[Group2]
+dbserver01
+dbserver02
+
+##Parent Level
+
+[dc_mumbai:children] 
+webservergrp
+dbsrvgrp
+
+##Variables
+
+[dc_mumbai:vars]
+ansible_user=&lt;user&gt;
+ansible_ssh_private_key_file=&lt;key-path&gt;
+</code></pre></div>
+</div>
+</div>
+</div>
+<details class="info-note">
+<summary>Info-note</summary>
+</details>
+<p>Host level has the Highest priority , If you mention anything like username or Keyfile etc. It will take only which are mentioned in the host level.</p>
+<h1 id="ansible-commands">Ansible Commands¶<a class="headerlink" href="#ansible-commands" title="Permanent link">&para;</a></h1>
+<p>To test the connection of particular Remote Machine</p>
+<div class="highlight"><pre><span></span><code>    ansible -i &lt;Inventoryfile path&gt; -m ping &lt;hostname&gt;
+</code></pre></div>
+<p>To test the connection of particular Group of Remote Machines</p>
+<div class="highlight"><pre><span></span><code>    ansible -i &lt;Inventoryfile path&gt; -m ping &lt;Groupname&gt;
+</code></pre></div>
+<p>To test the connection of All Remote Machine</p>
+<div class="highlight"><pre><span></span><code>    ansible -i &lt;Inventoryfile path&gt; -m ping all
+</code></pre></div>
+<p>To see details about the machine</p>
+<div class="highlight"><pre><span></span><code>    ansible -i &lt;Inventoryfile path&gt; -m setup &lt;hostname&gt;
+</code></pre></div>
+<p>Some Example Ad hoc Commands¶</p>
+<p>Ad hoc Commands
+Copy files to Remote machines name starts with web</p>
+<p>ansible -i <Inventoryfile path> -m copy -a "src=index,html dest=/var/www/html/index.html" 'web*' --become
+Installing httpd in centos Remote machine</p>
+<p>ansible -i <Inventoryfile path> -m yum -a "name=httpd state=present" websrvgrp --become
+Start &amp; Enable httpd in centos Remote machine</p>
+<p>ansible -i <Inventoryfile path> -m service -a "name=httpd state=started enabled=yes" websrvgrp --become
+Info</p>
+<p>Ansible Playbooks should be with .yml or .yaml Extension for example vim sample.yml</p>
+<p>Playbook For Creating Files &amp; Directories¶</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Sample Ansible Playbooks</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>- name: Creating Files &amp; Directories
+  hosts: &lt;host&gt;
+  become: yes
+  tasks:
+    - name: Creating a Directory
+        file:
+        path: /tmp/welcome
+        state: directory
+
+    - name: Creating a File
+        file:
+        path: /tmp/sample.txt
+        state: touch
+</code></pre></div>
+</div>
+</div>
+</div>
+<p>To Execute the playbook</p>
+<p>ansible-playbook -i <Inventory file path> sample.yml</p>
+<h1 id="writing-playbook-for-installing-httpd-service-in-remote-machines-with-start-and-enable-and-copying-indexhtml-files-from-local-machine-to-remote-machine">Writing Playbook For Installing Httpd service in remote machines with start and enable and copying index.html files from local machine to remote machine¶<a class="headerlink" href="#writing-playbook-for-installing-httpd-service-in-remote-machines-with-start-and-enable-and-copying-indexhtml-files-from-local-machine-to-remote-machine" title="Permanent link">&para;</a></h1>
+<div class="highlight"><pre><span></span><code>    - name: Install httpd and starting the service
+      hosts: all
+      tasks:
+        - name: Installing the Apache package
+        yum:
+            name: httpd
+            state: present
+
+
+        - name: Starting service
+        service:
+            name: httpd
+            state: started
+            enabled: yes
+
+        - name: Copy file with owner and permissions
+        copy:
+            src: ./index.html
+            dest: /var/www/html/index.html
+
+        - name: Restarting service
+        service:
+            name: httpd
+            state: restarted
+</code></pre></div>
+<h1 id="writing-playbook-for-setting-up-website-in-remote-machine">Writing Playbook for Setting Up Website in Remote Machine¶<a class="headerlink" href="#writing-playbook-for-setting-up-website-in-remote-machine" title="Permanent link">&para;</a></h1>
+<div class="highlight"><pre><span></span><code>    - name: Setting up Website
+      hosts: websrv
+      gather_facts: False
+      become: True
+
+      tasks:
+        - name: Installing Packages in CentOS
+        yum:
+            name: &quot;{{item}}&quot;
+            state: present
+        when: ansible_distribution == &quot;CentOS&quot;
+        loop:
+            - httpd
+            - wget
+            - unzip
+
+        - name: Start &amp; Enable httpd
+        service:
+            name: httpd
+            state: started
+            enabled: yes
+
+        - name: Downloading Source code
+        get_url:
+            url: https://www.tooplate.com/zip-templates/2114_pixie.zip
+            dest: /opt
+
+        - name: Unarchive a file that is already on the remote machine
+        unarchive:
+            src: /opt/2114_pixie.zip
+            dest: /opt
+            remote_src: yes
+
+        - name : Deploy Website
+        copy:
+            src: /opt/2114_pixie/
+            dest: /var/www/html/
+            remote_src: yes
+
+
+        - name: Restarting httpd service
+        service:
+            name: httpd
+            state: restarted
+</code></pre></div>
+<h1 id="writing-playbook-for-setting-up-website-in-remote-machine-with-conditions-handlers">Writing Playbook for Setting Up Website in Remote Machine with Conditions &amp; Handlers.¶<a class="headerlink" href="#writing-playbook-for-setting-up-website-in-remote-machine-with-conditions-handlers" title="Permanent link">&para;</a></h1>
+<div class="highlight"><pre><span></span><code>    - name: Writing playbook for loops and condtions
+      hosts: all
+      tasks:
+        - name: Install packages on centos
+        yum:
+            name: &quot;{{item}}&quot;
+            state: present
+        when: ansible_distribution == &quot;CentOS&quot;
+        loop:
+            - httpd
+            - wget
+            - unzip
+            - zip
+            - git
+
+        - name: Install packages on ubuntu 
+        apt:
+            name: &quot;{{item}}&quot;
+            state: present
+            update_cache: yes
+        when: ansible_distribution == &quot;Ubuntu&quot;
+        loop:
+            - apache2
+            - wget
+            - unzip
+            - zip
+            - git
+
+
+        - name: Start &amp; enable service on CentOS
+        service:
+        name: httpd
+        state: started
+        enabled: yes
+        when: ansible_distribution == &quot;CentOS&quot;
+
+        - name: Start &amp; enable service on Ubuntu
+        service:
+        name: apache2
+        state: started
+        enabled: yes
+        when: ansible_distribution == &quot;Ubuntu&quot;
+
+
+        - name: Push index.html on centos
+        copy:
+            src: index.html
+            dest: /var/www/html/
+            backup: yes
+        when: ansible_distribution == &quot;CentOS&quot;
+        notify:
+            - Restart service on CentOS
+
+        - name: Push index.html on ubuntu
+        copy:
+            src: index.html
+            dest: /var/www/html/
+            backup: yes
+        when: ansible_distribution == &quot;Ubuntu&quot;
+        notify:
+            - Restart service on Ubuntu
+
+    handlers:
+        - name: Restart service on CentOS
+        service:
+            name: httpd
+            state: restarted
+            enabled: yes
+        when: ansible_distribution == &quot;CentOS&quot;
+
+        - name: Restart service on Ubuntu
+        service:
+            name: apache2
+            state: restarted
+            enabled: yes
+        when: ansible_distribution == &quot;Ubuntu&quot;
+</code></pre></div>
+<h1 id="writing-playbook-to-create-vpc-in-aws-cloud-and-including-variables-from-different-file">Writing Playbook to Create VPC in AWS Cloud and Including Variables from different File¶<a class="headerlink" href="#writing-playbook-to-create-vpc-in-aws-cloud-and-including-variables-from-different-file" title="Permanent link">&para;</a></h1>
+<p>Requirements
+python &gt;= 3.6</p>
+<p>boto3 &gt;= 1.15.0</p>
+<p>botocore &gt;= 1.18.0</p>
+<p>apt install python3-pip</p>
+<p>pip install boto</p>
+<p>pip install boto3</p>
+<p>pip install botocore</p>
+<h1 id="creating-file-to-store-variables">Creating File to store Variables<a class="headerlink" href="#creating-file-to-store-variables" title="Permanent link">&para;</a></h1>
+<div class="highlight"><pre><span></span><code>vim vpc_setup.txt
+
+    vpc_name: &quot;Vprofile-vpc&quot;
+
+    #Vpc-range
+    vpcrange: &#39;172.21.0.0/16&#39;
+
+    #subnet range
+    pubip1: &#39;172.21.1.0/24&#39;
+    pubip2: &#39;172.21.2.0/24&#39;
+    pubip3: &#39;172.21.3.0/24&#39;
+    pvtip1: &#39;172.21.4.0/24&#39;
+    pvtip2: &#39;172.21.5.0/24&#39;
+    pvtip3: &#39;172.21.6.0/24&#39;
+
+    #region
+    region: &#39;us-east-2&#39;
+
+    #zone names
+    zone1: us-east-2a
+    zone2: us-east-2b
+    zone3: us-east-2c
+
+
+    state: present
+</code></pre></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Playbook</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>- hosts: localhost
+  connection: local
+  gather_facts: False
+  tasks:
+    - name: Import vpc variables
+    include_vars: /path/vpc_setup
+
+    - name: create Vprofile vpc
+    ec2_vpc_net:
+        name: &quot;{{vpc_name}}&quot;
+        cidr_block: &quot;{{vpcrange}}&quot;
+        region: &quot;{{region}}&quot;
+        dns_support: yes
+        dns_hostnames: yes
+        tenancy: default
+        state: &quot;{{state}}&quot;
+    register: vpcout
+
+    - name: Create public subnet for zone1
+    ec2_vpc_subnet:
+        vpc_id: &quot;{{vpcout.vpc.id}}&quot;
+        region: &quot;{{region}}&quot;
+        az: &quot;{{zone1}}&quot;
+        state: &quot;{{state}}&quot;
+        cidr: &quot;{{pubip1}}&quot;
+        map_public: yes
+        tags:
+            Name: vprofile_pubsub1
+    register: pubsub1_out
+
+    - name: Create public subnet for zone2
+    ec2_vpc_subnet:
+        vpc_id: &quot;{{vpcout.vpc.id}}&quot;
+        region: &quot;{{region}}&quot;
+        az: &quot;{{zone2}}&quot;
+        state: &quot;{{state}}&quot;
+        cidr: &quot;{{pubip2}}&quot;
+        map_public: yes
+        tags:
+        Name: vprofile_pubsub2
+    register: pubsub2_out
+
+    - name: Create public subnet for zone3
+    ec2_vpc_subnet:
+        vpc_id: &quot;{{vpcout.vpc.id}}&quot;
+        region: &quot;{{region}}&quot;
+        az: &quot;{{zone3}}&quot;
+        state: &quot;{{state}}&quot;
+        cidr: &quot;{{pubip3}}&quot;
+        map_public: yes
+        tags:
+        Name: vprofile_pubsub3
+    register: pubsub3_out
+
+    - name: Create private subnet for zone1
+    ec2_vpc_subnet:
+        vpc_id: &quot;{{vpcout.vpc.id}}&quot;
+        region: &quot;{{region}}&quot;
+        az: &quot;{{zone1}}&quot;
+        state: &quot;{{state}}&quot;
+        cidr: &quot;{{pvtip1}}&quot;
+        map_public: yes
+        tags:
+        Name: vprofile_pvtsub1
+    register: pvtsub1_out
+
+    - name: Create private subnet for zone2
+    ec2_vpc_subnet:
+        vpc_id: &quot;{{vpcout.vpc.id}}&quot;
+        region: &quot;{{region}}&quot;
+        az: &quot;{{zone2}}&quot;
+        state: &quot;{{state}}&quot;
+        cidr: &quot;{{pvtip2}}&quot;
+        map_public: yes
+        tags:
+        Name: vprofile_pvtsub2
+    register: pvtsub2_out
+
+    - name: Create private subnet for zone3
+    ec2_vpc_subnet:
+        vpc_id: &quot;{{vpcout.vpc.id}}&quot;
+        region: &quot;{{region}}&quot;
+        az: &quot;{{zone3}}&quot;
+        state: &quot;{{state}}&quot;
+        cidr: &quot;{{pvtip3}}&quot;
+        map_public: yes
+        tags:
+        Name: vprofile_pvtsub3
+    register: pvtsub3_out
+
+    - name: Internet gateway setup
+    ec2_vpc_igw:
+        vpc_id: &quot;{{vpcout.vpc.id}}&quot;
+        region: &quot;{{region}}&quot;
+        state: &quot;{{state}}&quot;
+        tags:
+        Name: vprofile_IGW
+    register: igw_out
+
+    - name: public subnet route table
+    ec2_vpc_route_table:
+        vpc_id: &quot;{{vpcout.vpc.id}}&quot;
+        region: &quot;{{region}}&quot;
+        tags:
+        Name: vprofile_Public
+        subnets:
+        - &quot;{{pubsub1_out.subnet.id}}&quot;
+        - &quot;{{pubsub2_out.subnet.id}}&quot;
+        - &quot;{{pubsub3_out.subnet.id}}&quot;
+        routes:
+        - dest: 0.0.0.0/0
+            gateway_id: &quot;{{ igw_out.gateway_id }}&quot;
+    register: public_route_table
+
+    - name: Create new nat gateway and allocate new EIP if a nat gateway does not yet exist in the subnet.
+    ec2_vpc_nat_gateway:
+        state: &quot;{{state}}&quot;
+        subnet_id: &quot;{{pubsub1_out.subnet.id}}&quot;
+        wait: true
+        region: &quot;{{region}}&quot;
+        if_exist_do_not_create: true
+    register: nat_out
+
+    - name: private subnet route table
+    ec2_vpc_route_table:
+        vpc_id: &quot;{{vpcout.vpc.id}}&quot;
+        region: &quot;{{region}}&quot;
+        tags:
+        Name: vprofile_Private
+        subnets:
+        - &quot;{{pvtsub1_out.subnet.id}}&quot;
+        - &quot;{{pvtsub2_out.subnet.id}}&quot;
+        - &quot;{{pvtsub3_out.subnet.id}}&quot;
+        routes:
+        - dest: 0.0.0.0/0
+            gateway_id: &quot;{{nat_out.nat_gateway_id}}&quot;
+    register: private_route_table
+
+    - debug:
+        var: &quot;{{item}}&quot;
+    loop:
+        - vpcout.vpc.id
+        - pubsub1_out.subnet.id
+        - pubsub2_out.subnet.id
+        - pubsub3_out.subnet.id
+        - pvtsub1_out.subnet.id
+        - pvtsub2_out.subnet.id
+        - pvtsub3_out.subnet.id
+        - igw_out.gateway_id
+        - public_route_table.route_table.id
+        - nat_out.nat_gateway_id
+        - private_route_table.route_table.id
+
+    - set_fact:
+        vpcid: &quot;{{vpcout.vpc.id}}&quot;
+        pubsublid: &quot;{{ pubsub1_out.subnet.id }}&quot;
+        pubsub2id: &quot;{{ pubsub2_out.subnet.id }}&quot;
+        pubsub3id: &quot;{{ pubsub3_out.subnet.id }}&quot;
+        privsublid: &quot;{{ pvtsub1_out.subnet.id }}&quot;
+        privsub2id: &quot;{{ pvtsub2_out.subnet.id }}&quot;
+        privsub3id: &quot;{{ pvtsub3_out.subnet.id }}&quot;
+        igwid: &quot;{{ igw_out.gateway_id }}&quot;
+        pubRTid: &quot;{{ public_route_table.route_table.id }}&quot;
+        NATGWid: &quot;{{ nat_out.nat_gateway_id }}&quot;
+        privRTid: &quot;{{ private_route_table.route_table.id }}&quot;
+        cacheable: yes
+
+    - name: creating file for vpc output
+    copy:
+        content: &quot;vpcid: {{vpcout.vpc.id}}\n pubsublid: {{ pubsub1_out.subnet.id }}\npubsub2id: {{ pubsub2_out.subnet.id }}\npubsub3id: {{ pubsub3_out.subnet.id }}\nprivsublid: {{ pvtsub1_out.subnet.id }}\nprivsub2id: {{ pvtsub2_out.subnet.id }}\nprivsub3id: {{ pvtsub3_out.subnet.id }}\nigwid: {{ igw_out.gateway_id }}\npubRTid: {{ public_route_table.route_table.id }}\nNATGWid: {{ nat_out.nat_gateway_id }}\nprivRTid: {{ private_route_table.route_table.id }}&quot;
+        dest: /home/ubuntu/Vprofile/vars/output_vars
+</code></pre></div>
+</div>
+</div>
+</div>
+<h1 id="launching-ec2-instance-in-aws-cloud">Launching Ec2 Instance in AWS Cloud¶<a class="headerlink" href="#launching-ec2-instance-in-aws-cloud" title="Permanent link">&para;</a></h1>
+<details class="requirements">
+<summary>Requirements</summary>
+<div class="highlight"><pre><span></span><code>python &gt;= 3.6
+
+boto3 &gt;= 1.15.0
+
+botocore &gt;= 1.18.0
+</code></pre></div>
+</details>
+<p>apt install python3-pip</p>
+<p>pip install boto</p>
+<p>pip install boto3</p>
+<p>pip install botocore</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:1"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Launching Instance Playbook</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>- name: Launching Ec2 Instance
+</code></pre></div>
+</div>
+</div>
+</div>
+<p>hosts: localhost
+  connection: local
+  tasks:
+     - name: Creating Key pair
+       amazon.aws.ec2_key:
+         name: samplekey
+         region: us-west-1
+       register: key</p>
+<div class="highlight"><pre><span></span><code> - debug:
+    var: key
+
+ - name: Storing privatekey into a file
+   copy:
+      content: &quot;{{key.key.private_key}}&quot;
+      dest: &quot;./sample.pem&quot;
+      mode: 0600
+   when: key.changed
+
+
+ - name: Creating Security Group
+   amazon.aws.ec2_group:
+     name: mysg
+     description: Allowing 22 and 80
+     vpc_id: vpc-0c8e70cf05b1342ac
+     region: us-west-1
+     rules:
+       - proto: tcp
+         from_port: 22
+         to_port: 22
+         cidr_ip: 0.0.0.0/0
+         rule_desc: allow all on port 80 &amp; 22
+   register: sg_out
+
+ - name: Launching bastion_host
+   ec2:
+      key_name: &quot;samplekey&quot;
+      region: us-west-1
+      instance_type: t2.micro
+      image: ami-0573b70afecda915d
+      wait: yes
+      wait_timeout: 300
+      instance_tags:
+        name: &quot;Ansible Instance&quot;
+        project: vprofile
+        owner: devops team
+      exact_count: 1
+      count_tag:
+        name: &quot;Ansible Instance&quot;
+        project: vprofile
+        owner: devops team
+      group_id: &quot;{{sg_out.group_id}}&quot;
+      vpc_subnet_id: subnet-0c4734c845e549cda
+   register: instance
+</code></pre></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:1"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">Ansible Configuration File</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<details class="note">
+<summary>Note</summary>
+<p>You should save the configuration file with name ansible.cfg</p>
+<div class="highlight"><pre><span></span><code>vim ansible.cfg
+</code></pre></div>
+</details>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:1"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">Ansible Configuration File</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>[defaults]
+host_key_checking=False
+inventory=&lt;Inventory File Path&gt;
+timeout=20
+log_path=/var/log/ansible_world.log
+remote_port=22
+remote_user=&lt;username&gt;
+
+[privilege_escalation]
+become=True
+become_method=sudo
+become_user=root
+become_ask_pass=False
+</code></pre></div>
+</div>
+</div>
+</div>
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../jenkins/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Jenkins" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Jenkins
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../docker/" class="md-footer__link md-footer__link--next" aria-label="Next: Docker" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Docker
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2020 - 2022 Sreenath Rangana
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://github.com/SreenathRangana?tab=repositories" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://hub.docker.com/u/sreenathkk96" target="_blank" rel="noopener" title="hub.docker.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M349.9 236.3h-66.1v-59.4h66.1v59.4zm0-204.3h-66.1v60.7h66.1V32zm78.2 144.8H362v59.4h66.1v-59.4zm-156.3-72.1h-66.1v60.1h66.1v-60.1zm78.1 0h-66.1v60.1h66.1v-60.1zm276.8 100c-14.4-9.7-47.6-13.2-73.1-8.4-3.3-24-16.7-44.9-41.1-63.7l-14-9.3-9.3 14c-18.4 27.8-23.4 73.6-3.7 103.8-8.7 4.7-25.8 11.1-48.4 10.7H2.4c-8.7 50.8 5.8 116.8 44 162.1 37.1 43.9 92.7 66.2 165.4 66.2 157.4 0 273.9-72.5 328.4-204.2 21.4.4 67.6.1 91.3-45.2 1.5-2.5 6.6-13.2 8.5-17.1l-13.3-8.9zm-511.1-27.9h-66v59.4h66.1v-59.4zm78.1 0h-66.1v59.4h66.1v-59.4zm78.1 0h-66.1v59.4h66.1v-59.4zm-78.1-72.1h-66.1v60.1h66.1v-60.1z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://www.instagram.com/sreenath.rk/" target="_blank" rel="noopener" title="www.instagram.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://www.facebook.com/sreenath.rangana/" target="_blank" rel="noopener" title="www.facebook.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/sreenath_alya" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+    
+    
+    <a href="mailto:<sreenathkk96@gmail.com>" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="m511.6 36.86-64 415.1a32.008 32.008 0 0 1-31.65 27.147c-4.188 0-8.319-.815-12.29-2.472l-122.6-51.1-50.86 76.29C226.3 508.5 219.8 512 212.8 512c-11.5 0-20.8-9.3-20.8-20.8v-96.18c0-7.115 2.372-14.03 6.742-19.64L416 96 122.3 360.3 19.69 317.5C8.438 312.8.812 302.2.062 289.1s5.47-23.72 16.06-29.77l448-255.1c10.69-6.109 23.88-5.547 34 1.406S513.5 24.72 511.6 36.86z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "content.tooltips", "header.autohide", "announce.dismiss", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.0238f547.min.js"></script>
+      
+    
+  </body>
+</html>
