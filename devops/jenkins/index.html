@@ -263,11 +263,18 @@
   
   
   
+    
+
+  
+  
+  
     <li class="md-tabs__item">
-      <a href="../devopsintro/" class="md-tabs__link md-tabs__link--active">
+      <a href="../linux-Basic-Commands/" class="md-tabs__link md-tabs__link--active">
         DevOps
       </a>
     </li>
+  
+
   
 
       
@@ -506,6 +513,14 @@
         
           
         
+          
+        
+          
+        
+          
+        
+          
+        
       
       
         <label class="md-nav__link" for="__nav_4">
@@ -519,6 +534,107 @@
           DevOps
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" type="checkbox" id="__nav_4_1" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_1">
+          Linux
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Linux" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          Linux
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux-Basic-Commands/" class="md-nav__link">
+        Basic-Commands
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Linux_File_system_and_VIM/" class="md-nav__link">
+        Linux-FileSystems
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Linux-Filters-Redirections/" class="md-nav__link">
+        Linux-Filters-Redirections
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../File-Permissions%26Manual_Website_Deployment/" class="md-nav__link">
+        File-Permissions&Manual_Website_Deployment
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
           
             
               
@@ -611,7 +727,7 @@
     <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_6" type="checkbox" id="__nav_4_6" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_7" type="checkbox" id="__nav_4_7" >
       
       
       
@@ -624,13 +740,13 @@
         
       
       
-        <label class="md-nav__link" for="__nav_4_6">
+        <label class="md-nav__link" for="__nav_4_7">
           Kuberbenetes
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Kuberbenetes" data-md-level="2">
-        <label class="md-nav__title" for="__nav_4_6">
+        <label class="md-nav__title" for="__nav_4_7">
           <span class="md-nav__icon md-icon"></span>
           Kuberbenetes
         </label>
@@ -680,6 +796,48 @@
           
         </ul>
       </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../microservices/" class="md-nav__link">
+        Microservices
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AzureRepo%26Github/" class="md-nav__link">
+        Azure
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GithubPages%26Architecturetypes/" class="md-nav__link">
+        GithubPages&Architecturetypes
+      </a>
     </li>
   
 
@@ -778,6 +936,104 @@
 <h1 id="jenkins">Jenkins<a class="headerlink" href="#jenkins" title="Permanent link">&para;</a></h1>
 <p>Jenkins is a continuous integration tool. It can fetch the code from version control system ,build the code ,test it and notify to the developer.Jenkins can do continuous delivery also.jenkins having so many plugins ,by using these plugins we can do any task in jenkins.jenkin is a open sources project. It is a java based web application server so we need to setup first java on the machine to run jenkins server.</p>
 <h1 id="jenkins-ci-cd-automation">Jenkins CI CD Automation<a class="headerlink" href="#jenkins-ci-cd-automation" title="Permanent link">&para;</a></h1>
+<h1 id="jenkins-1st-pipeline">Jenkins 1<sup>st</sup> Pipeline<a class="headerlink" href="#jenkins-1st-pipeline" title="Permanent link">&para;</a></h1>
+<p>Setting up a freestyle pipeline in Jenkins to link your Git public repository and run the <code>ls</code> command in a bash shell is a straightforward process. Here are the detailed steps:</p>
+<h4 id="prerequisites">Prerequisites:<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Jenkins installed and configured.</li>
+<li>A public Git repository (e.g., GitHub, GitLab, Bitbucket).</li>
+<li>Administrative access to your Jenkins instance.</li>
+</ul>
+<h3 id="step-1-install-required-plugins-if-not-already-installed">Step 1: Install Required Plugins (if not already installed)<a class="headerlink" href="#step-1-install-required-plugins-if-not-already-installed" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>In your Jenkins dashboard, click on "Manage Jenkins" in the left sidebar.</p>
+</li>
+<li>
+<p>Click on "Manage Plugins."</p>
+</li>
+<li>
+<p>Go to the "Available" tab and search for and install the following plugins if they are not already installed:</p>
+</li>
+<li>Git Plugin: For Git integration.</li>
+<li>
+<p>Build Timeout Plugin (optional but recommended): To set a time limit for the build.</p>
+</li>
+<li>
+<p>After installing the plugins, Jenkins may ask you to restart. If so, follow the prompts to restart Jenkins.</p>
+</li>
+</ol>
+<h3 id="step-2-create-a-new-freestyle-project">Step 2: Create a New Freestyle Project<a class="headerlink" href="#step-2-create-a-new-freestyle-project" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>In your Jenkins dashboard, click on "New Item" in the left sidebar.</p>
+</li>
+<li>
+<p>Enter a name for your project (e.g., "MyFreestylePipeline") and select "Freestyle project."</p>
+</li>
+<li>
+<p>Click "OK" to create the project.</p>
+</li>
+</ol>
+<h3 id="step-3-configure-source-code-management-git">Step 3: Configure Source Code Management (Git)<a class="headerlink" href="#step-3-configure-source-code-management-git" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>In the project configuration page, scroll down to the "Source Code Management" section.</p>
+</li>
+<li>
+<p>Select "Git."</p>
+</li>
+<li>
+<p>In the "Repository URL" field, enter the URL of your public Git repository.</p>
+</li>
+<li>
+<p>You can leave the "Branches to build" field empty to build the default branch (e.g., <code>main</code> or <code>master</code>).</p>
+</li>
+<li>
+<p>If your Git repository requires credentials, click the "Add" button next to "Credentials" and enter your Git credentials. If it's a public repository, you may not need credentials.</p>
+</li>
+<li>
+<p>Click "Save" at the bottom of the page.</p>
+</li>
+</ol>
+<h3 id="step-4-configure-build-actions-run-ls-command">Step 4: Configure Build Actions (Run <code>ls</code> Command)<a class="headerlink" href="#step-4-configure-build-actions-run-ls-command" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Scroll down to the "Build" section in your project configuration.</p>
+</li>
+<li>
+<p>Click the "Add build step" dropdown and select "Execute shell" (for running bash commands).</p>
+</li>
+<li>
+<p>In the "Command" text area, enter the <code>ls</code> command or any other bash command you want to run, e.g.:</p>
+</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>ls
+</code></pre></div>
+<ol>
+<li>
+<p>Optionally, you can add more build steps or post-build actions as needed.</p>
+</li>
+<li>
+<p>Click "Save" at the bottom of the page.</p>
+</li>
+</ol>
+<h3 id="step-5-build-the-freestyle-pipeline">Step 5: Build the Freestyle Pipeline<a class="headerlink" href="#step-5-build-the-freestyle-pipeline" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>In your Jenkins dashboard, locate your newly created freestyle project ("MyFreestylePipeline" or whatever you named it).</p>
+</li>
+<li>
+<p>Click on the project name.</p>
+</li>
+<li>
+<p>In the project page, click "Build Now" to trigger a build.</p>
+</li>
+<li>
+<p>Jenkins will clone your Git repository, execute the <code>ls</code> command, and display the build output in the console.</p>
+</li>
+</ol>
+<p>That's it! You've set up a freestyle pipeline in Jenkins that links to your public Git repository and runs the <code>ls</code> command in a bash shell. You can further customize your pipeline with additional build steps, post-build actions, and integration with other tools as needed.</p>
 <h1 id="jenkins-setup">Jenkins Setup<a class="headerlink" href="#jenkins-setup" title="Permanent link">&para;</a></h1>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Ubuntu</label><label for="__tabbed_1_2">CentOS</label></div>
 <div class="tabbed-content">
@@ -867,7 +1123,7 @@ sudo yum install jenkins -y
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright &copy; 2020 - 2023 Sreenath Rangana
+      Copyright &copy; 2020 - 2024 Sreenath Rangana
     </div>
   
   
